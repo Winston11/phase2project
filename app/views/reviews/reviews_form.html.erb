@@ -1,0 +1,21 @@
+<%= render partial: "partials/navbar" %> 
+<center>
+<div class="comment-body-bg">
+  <div class="comment-text-box">
+    <div class="ui form">
+      <label>
+      <%=form_for @review do |f|%> 
+        <%=f.label :message, "Review: " %>
+        <%=f.text_area :message, required: true%> 
+        <%= f.hidden_field :post_id %>
+        <br><br>
+        <%=f.label :message, "Review: " %>
+        <%=f.text_area :message, required: true%> 
+        <%= f.hidden_field :post_id %>
+        <br><br>
+        <%=f.submit%> 
+        <%end%> 
+      </label>
+    </div>
+  </div>
+</div>
